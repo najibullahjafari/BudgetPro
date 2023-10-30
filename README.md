@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Ruby on Rails group project</b></h3>
+  <h3><b>BudgetPro</b></h3>
 </div>
 
 [![codecov](https://codecov.io/gh/cancelei/blog-in-rails/graph/badge.svg?token=ITBDQ9ZRO7)](https://codecov.io/gh/cancelei/blog-in-rails)
@@ -11,7 +11,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Ruby on Rails group project ](#ruby-on-rails-group-project)
+- [📖 BudgetPro ](#ruby-on-rails-group-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -31,10 +31,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Ruby on Rails group project<a name="ruby-on-rails-group-project"></a>
+# 📖 BudgetPro<a name="ruby-on-rails-group-project"></a>
 
-**Ruby on Rails group project** 
-The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them.
+**BudgetPro** 
+The Ruby on Rails capstone project is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,7 +53,6 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -62,7 +61,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 ### Key Features <a name="key-features"></a>
 
 - **Make use for migrations features from Active Record**
-- **Include Tables for User, Comment, Post, and Like**
+- **Include Tables for User, Categories and Transactions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +87,7 @@ first at all, install rails:
 Clone this repository to your desired folder:
 
 ```sh
-git clone https://github.com/najibullahjafari/RoR-group-project.git
+git clone https://github.com/najibullahjafari/BudgetPro
 ```
 
 ### Install
@@ -126,7 +125,7 @@ bin/rails db:migrate RAILS_ENV=test
 ```
 
 **Note:** Given that the aim of this project is to test the application's UI, to see if it works without side effects. We have therefore had to modify the contents of certain files, which could have the effect of falsifying certain `Unit` tests.
-We therefore recommend that, rather than running all the tests, you only test the `features` folder and run
+We therefore recommend that, rather than running all the tests, you only test the `features` folder.
 
 ```sh
 bundle exec rspec ./spec/features
@@ -160,13 +159,6 @@ Setting up the Data Base:
 - Twitter: [Najibullah_jafari](https://twitter.com/Najib_Jafari_)
 - LinkedIn: [Najibullah_jafari](https://www.linkedin.com/in/najibullahjafari/)
 
-👤 **Syeda Masuma Fatima**
-
-- GitHub: [@MasumaJaffery](https://github.com/MasumaJaffery)
-- Twitter: [@MasumaJaffery](https://twitter.com/MasumaJaffery)
-- LinkedIn: [Masuma Jaffery](https://www.linkedin.com/in/masuma-jaffery-797a29256/)
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -177,7 +169,7 @@ Setting up the Data Base:
 
 - [x] **User Interface**
 - [x] **Validations**
-- [ ] **API documentation**
+- [x] **API documentation**
 - [x] **Model Data**
 - [x] **Controllers Testing**
 - [x] **Models Testing**
@@ -189,6 +181,8 @@ Setting up the Data Base:
 - [x] **Controllers Testing**
 - [x] **Models Testing**
 - [x] **View Implementation**
+- [x] **Integration Testing**
+- [x] **Unit Testing**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,7 +193,7 @@ Setting up the Data Base:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/najibullahjafari/RoR-group-project.git/issues).
+Feel free to check the [issues page](https://github.com/najibullahjafari/BudgetPro/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +203,7 @@ Feel free to check the [issues page](https://github.com/najibullahjafari/RoR-gro
 
 > Would you like to help?
 
-If you like this project feel free to leave an start, as well if you have a suggestion feel free to visit issues page.
+If you like this project feel free to leave an star, as well if you have a suggestion feel free to visit issues page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,7 +211,7 @@ If you like this project feel free to leave an start, as well if you have a sugg
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for suggestion this project.
+I would like to thank Gregoire Vella due to his effort with this great UI.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
