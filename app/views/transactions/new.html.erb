@@ -1,13 +1,10 @@
 <h2>Add a New Transaction</h2>
-<%= form_for @transaction do |f| %>
+<%= form_for @transaction, url: category_transactions_path(@category) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   
   <%= f.label :amount %>
   <%= f.text_field :amount %>
-  
-  <%= f.label :category %>
-  <%= f.collection_select :category_id, current_user.categories, :id, :name, prompt: "Select a Category" %>
-  
-  <%= f.submit "Save" %>
+
+  <%= f.submit "Create Transaction" %>
 <% end %>
