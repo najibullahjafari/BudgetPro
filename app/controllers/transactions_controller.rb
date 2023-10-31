@@ -1,17 +1,16 @@
 class TransactionsController < ApplicationController
-
   def index
     @category = Category.find(params[:category_id])
     @transactions = @category.transactions.order(created_at: :desc)
     @total_amount = @transactions.sum(:amount)
   end
 
-  def new 
-     @category = Category.find(params[:category_id])
+  def new
+    @category = Category.find(params[:category_id])
     @transaction = Transaction.new
   end
 
-    def create
+  def create
     @transaction = current_user.transactions.build(transaction_params)
 
     # Set the category_id based on the URL parameter
@@ -19,7 +18,7 @@ class TransactionsController < ApplicationController
 
     if @transaction.save
       category = Category.find(params[:category_id]) # Find the associated category
-      redirect_to category_transactions_path(category), notice: "Transaction added"
+      redirect_to category_transactions_path(category), notice: 'Transaction added'
     else
       render :new
     end
