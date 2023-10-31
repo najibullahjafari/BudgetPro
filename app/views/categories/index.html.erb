@@ -1,0 +1,10 @@
+<h2> Categroy </h2>
+<ul>
+  <%= @categories.each do |category| %>
+    <li>
+      <%= category.name %>
+      <%= link_to "View Transactions", category_transactions_path(category) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Add a new Category", new_category_path %>

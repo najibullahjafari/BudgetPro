@@ -1,0 +1,10 @@
+<h2>Add a New Transaction</h2>
+<%= form_for @transaction, url: category_transactions_path(@category) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
+
+  <%= f.submit "Create Transaction" %>
+<% end %>
