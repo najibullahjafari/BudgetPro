@@ -1,10 +1,16 @@
-<h2>Transactions for <%= @category.name %></h2>
-<p>Total Amount: <%= @total_amount %></p>
-<ul>
-  <% @transactions.each do |transaction| %>
-    <li>
-      <%= transaction.name %> - Amount: <%= transaction.amount %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to "Add a New Transaction", new_category_transaction_path(@category) %>
+<div class="container">
+  <h2 class="my-4 text-color">Transactions for <%= @category.name %></h2>
+  <p class="text-color">Total Amount: <%= @total_amount %></p>
+  <ul class="list-group">
+    <% @transactions.each do |transaction| %>
+      <li class="list-group-item d-flex justify-content-between category-item align-items-center">
+        <div class="d-flex align-items-center">
+          <span class="transaction-name text-color"><%= transaction.name %></span>
+        </div>
+        <span class="text-color">Amount: <%= transaction.amount %></span>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add", new_category_transaction_path(@category), class: 'btn secondary-color my-4' %>
+  <%= link_to "Back", categories_path, class: 'btn primary-color' %>
+</div>

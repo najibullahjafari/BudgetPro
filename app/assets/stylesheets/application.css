@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+/* styles.css or styles.scss */
+
+.primary-color {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.secondary-color {
+  background-color: #5fb523;
+  color: #fff;
+}
+
+.text-color {
+  color: #434b54;
+}
+
+.text-decore {
+  text-decoration: none;
+}
+
+.category-icon {
+  background-color: #5fb523;
+  color: #434b54;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-item {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.selected-icon {
+  color: #5fb523;
+}
+
+.category-item a {
+  color: #000; /* Set the default text color */
+  transition: color 0.3s; /* Add a smooth color transition */
+}
+
+.category-item:hover a {
+  color: #fff !important; /* Change text color to white on hover */
+}
+
+.category-item:hover {
+  background-color: #3778c2; /* Change the background color on hover */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth background color transition */
+}
