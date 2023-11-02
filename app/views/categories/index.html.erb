@@ -1,10 +1,23 @@
-<h2> Categroy </h2>
-<ul>
-  <%= @categories.each do |category| %>
-    <li>
-      <%= category.name %>
-      <%= link_to "View Transactions", category_transactions_path(category) %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to "Add a new Category", new_category_path %>
+<div class="container">
+  <h2 class="my-4">Categories</h2>
+  <ul class="list-group">
+    <% @categories.each do |category| %>
+      <li class="list-group-item d-flex justify-content-between category-item align-items-center">
+        <a href="<%= category_transactions_path(category) %>" class="text-decore" style="width: 100%;">
+          <div class="row">
+            <div class="col-2">
+              <span class="category-icon <%= category.icon %> fa-2x"></span>
+            </div>
+            <div class="col-5 category-name">
+              <%= category.name %>
+            </div>
+            <div class="col-2 text-right category-amount">
+              <%= number_to_currency(category.total_amount) %>
+            </div>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a new Category", new_category_path, class: 'btn secondary-color my-4' %>
+</div>

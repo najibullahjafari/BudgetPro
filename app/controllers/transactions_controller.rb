@@ -1,4 +1,6 @@
 class TransactionsController < ApplicationController
+  before_action :set_category
+
   def index
     @category = Category.find(params[:category_id])
     @transactions = @category.transactions.order(created_at: :desc)
@@ -28,5 +30,9 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:name, :amount)
+  end
+
+  def set_category
+    @category = Category.find(params[:category_id])
   end
 end

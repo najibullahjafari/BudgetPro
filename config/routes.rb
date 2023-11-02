@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  root 'static_pages#splash'
 
-  resources :categories do
-    resources :transactions, only: [:index, :new, :create]
-  end
+  get 'static_pages/splash'
+devise_for :users
 
-  root 'categories#index'
+resources :categories do
+  resources :transactions, only: [:index, :new, :create]
 end
+end
+
