@@ -1,5 +1,6 @@
+<h2 class="mt-0 mb-4 p-2 primary-color text-white text-center">Add a new Category</h2>
 <div class="container">
-  <h2 class="my-4">Add a new Category</h2>
+  
   <%= form_for @category, class: 'form' do |f| %>
     <div class="form-group">
       <%= f.label :name %>
@@ -18,11 +19,19 @@
       <%= f.hidden_field :icon, class: 'selected-icon-input' %>
     </div>
 
-    <div class="actions mt-3">
-      <%= f.submit "Save", class: 'btn secondary-color' %>
-      <%= link_to 'Back', categories_path, class: 'btn primary-color ml-2' %>
-    </div>
+   <div class="actions mt-3 row">
+  <div class="col">
+    <%= f.submit "Save", class: 'btn secondary-color btn-end btn-block' %>
+  </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col">
+    <%= link_to 'Back', categories_path, class: 'btn btn-end primary-color btn-block' %>
+  </div>
+</div>
   <% end %>
+
 
 
 <script>
