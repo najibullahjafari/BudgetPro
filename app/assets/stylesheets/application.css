@@ -69,3 +69,13 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+.headline {
+    font-family: 'Proxima Nova', sans-serif !important;
+    font-weight: bold;
+}
+
+.general-text {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 300;
+}
