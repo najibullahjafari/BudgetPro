@@ -1,18 +1,18 @@
 databases:
-  - name: BudgetPro
-    databaseName: BudgetPro
-    user: BudgetPro
+  - name: Budgetpro
+    databaseName: Budgetpro
+    user: Budgetpro
 
 services:
   - type: web
-    name: BudgetPro
+    name: Budgetpro
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: BudgetPro
+          name: Budgetpro
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
