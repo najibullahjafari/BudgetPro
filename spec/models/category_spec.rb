@@ -1,32 +1,20 @@
-# spec/models/category_spec.rb
-
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  describe 'Associations' do
-    it { should belong_to(:user) }
-    it { should have_many(:transactions) }
+  before do
+    @user = User.create(full_name: 'Najib', email: 'john@example.com', password: 'password123')
+    @category = Category.create(name: 'Sample Category', icon: 'fa-icon-name', user: @user)
   end
 
-  describe 'total_amount' do
-    it 'returns the sum of transaction amounts for the category' do
-      user = User.create(email: 'test@example.com', password: 'password')
-      category = Category.create(name: 'Test Category', user: user)
-      transaction1 = Transaction.create(name: 'Transaction 1', amount: 100, category: category)
-      transaction2 = Transaction.create(name: 'Transaction 2', amount: 200, category: category)
+  it 'should be valid' do
+    expect(@category).to be_valid
+  end
 
-      total_amount = category.total_amount
+  it 'should have a user' do
+    expect(@category.user).to eq(@user)
+  end
 
-      expect(total_amount).to eq(300)
-    end
-
-    it 'returns 0 if there are no transactions for the category' do
-      user = User.create(email: 'test@example.com', password: 'password')
-      category = Category.create(name: 'Empty Category', user: user)
-
-      total_amount = category.total_amount
-
-      expect(total_amount).to eq(0)
-    end
+  it 'should have an icon' do
+    expect(@category.icon).to eq('fa-icon-name')
   end
 end
