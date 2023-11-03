@@ -1,25 +1,28 @@
-<div class="container">
-  <h2 class="my-4 text-color">Add a New Transaction</h2>
+<h2 class="mt-0 mb-4 p-2 primary-color text-white text-center">Add a New Transaction</h2>
+<div class="container ">
+  
   <%= form_for @transaction, url: category_transactions_path(@category) do |f| %>
-    <div class="form-group">
-      <%= f.label :name, class: 'text-color' %>
-      <%= f.text_field :name, class: 'form-control', required: true %>
+    <div class="form-group ">
+      <%= f.text_field :name, placeholder: "Name", class: 'form-control no-border-radius', required: true %>
     </div>
     
     <div class="form-group">
-      <%= f.label :amount, class: 'text-color' %>
-      <%= f.text_field :amount, class: 'form-control', required: true %>
+      <%= f.text_field :amount, placeholder: "Amount", class: 'form-control no-border-radius', required: true %>
     </div>
 
     <div class="form-group">
-      <%= f.label :category_ids, "Categories", class: 'text-color' %>
-  <%= f.collection_select :category_ids, Category.all, :id, :name, {  }, { multiple: true, class: 'form-control' } %>
-
+      <%= f.collection_select :category_ids, Category.all, :id, :name, {  }, { multiple: true, class: 'form-control no-border-radius' } %>
     </div>
 
-    <div class="actions mt-3">
-      <%= f.submit "Save", class: 'btn secondary-color' %>
-      <%= link_to "Back", category_transactions_path(@category), class: 'btn primary-color ml-2 back-link' %>
-    </div>
+      <div class = "row text-center">
+        <div class = "col m-1">
+        <%= f.submit "Save", class: 'btn btn-end secondary-color' %>
+        </div>
+      </div>
+      <div class = "row text-center">
+        <div class = "col m-1">
+        <%= link_to "Back", category_transactions_path(@category), class: 'btn btn-end primary-color ml-2 back-link' %>
+         </div> 
+      </div>
   <% end %>
 </div>
