@@ -15,6 +15,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -35,6 +36,7 @@
 
 **BudgetPro** 
 The Ruby on Rails capstone project is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+You can see an introduction of this webpage in this [video](https://drive.google.com/file/d/1oBzqc8N57oS7Pg359pGpcTlULL4Htnqs/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -62,6 +64,12 @@ The Ruby on Rails capstone project is about building a mobile web application wh
 
 - **Make use for migrations features from Active Record**
 - **Include Tables for User, Categories and Transactions**
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> If you would like to see this site on action click on the link below:
+
+- [Live Demo Link](https://budget-8wcg.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
