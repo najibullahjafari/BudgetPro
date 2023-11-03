@@ -4,4 +4,7 @@ class Category < ApplicationRecord
   def total_amount
     budget_transactions.sum(:amount)
   end
+
+  validates :name, presence: true
+  validates :icon, presence: true
 end
