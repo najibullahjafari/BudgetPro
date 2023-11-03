@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
-  let(:user) { create(:user) } #User factory
+  let(:user) { create(:user) } # User factory
 
   before do
     sign_in(user) # Sign in the user using Devise
@@ -14,7 +14,7 @@ RSpec.describe CategoriesController, type: :controller do
     end
 
     it 'assigns the user categories to @categories' do
-      category = create(:category, user: user)
+      category = create(:category, user:)
       get :index
       expect(assigns(:categories)).to eq([category])
     end

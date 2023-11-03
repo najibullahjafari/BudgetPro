@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe TransactionsController, type: :controller do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
   let(:valid_transaction_params) { { name: 'Sample Transaction', amount: 100, category_ids: [category.id] } }
   let(:invalid_transaction_params) { { name: 'Sample Transaction', amount: nil, category_ids: [category.id] } }
 
