@@ -13,7 +13,8 @@
 
     <div class="form-group">
       <%= f.label :category_ids, "Categories", class: 'text-color' %>
-      <%= f.collection_select :category_ids, Category.all, :id, :name, { required: true }, multiple: true, class: 'form-control' %>
+  <%= f.collection_select :category_ids, Category.all, :id, :name, {  }, { multiple: true, class: 'form-control' } %>
+
     </div>
 
     <div class="actions mt-3">
