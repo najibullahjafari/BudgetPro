@@ -1,13 +1,13 @@
 <div class="container">
-  <h2 class="my-4 text-color">Transactions for <%= @category.name %></h2>
-  <p class="text-color">Total Amount: <%= @total_amount %></p>
+  <h2 class="my-4 text-color headline">Transactions for <%= @category.name %></h2>
+  <p class="text-color general-text">Total Amount: <%= @total_amount %></p>
 <ul class="list-group">
   <% @budget_transactions.each do |transaction| %>
     <li class="list-group-item d-flex justify-content-between category-item align-items-center">
       <div class="d-flex align-items-center">
-        <span class="transaction-name text-color"><%= transaction.name %></span>
+        <span class="transaction-name text-color general-text"><%= transaction.name %></span>
       </div>
-      <span class="text-color">Amount: <%= transaction.amount %></span>
+      <span class="text-color general-text">Amount: <%= transaction.amount %></span>
     </li>
   <% end %>
 </ul>
