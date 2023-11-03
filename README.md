@@ -36,7 +36,7 @@
 
 **BudgetPro** 
 The Ruby on Rails capstone project is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
-You can see an introduction of this webpage in this [video](https://drive.google.com/file/d/1oBzqc8N57oS7Pg359pGpcTlULL4Htnqs/view?usp=sharing)
+You can see an introduction of this webpage in this [video](https://drive.google.com/file/d/1HqfuZXhdDsrbV3hWCkM7x45JzBIvJ8Sv/view?usp=sharing)
 
 ## 🛠 Built With <a name="built-with"></a>
 
