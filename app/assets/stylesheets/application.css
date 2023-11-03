@@ -31,7 +31,7 @@
 }
 
 .text-decore {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .category-icon {
@@ -79,3 +79,45 @@
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 300;
 }
+
+/* for btn of end of page */
+
+.sign-foot {
+  margin-top: 70%;
+}
+
+.btn-end {
+  border-radius: 1px !important;
+  width: 380px;
+}
+
+/* no border radius */
+
+.no-border-radius {
+  border-radius: 0 !important; /* Removes border radius */
+}
+
+/* no space */
+
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-abs {
+  position: absolute;
+  bottom: 10px;
+}
+
+.header-page {
+  width: 100% !important;
+}
+
+.num-of-trans {
+  font-weight: 100;
+}
+
+.custom-btn {
+    margin: 4px; /* Adjust the margin as needed */
+  }
+
