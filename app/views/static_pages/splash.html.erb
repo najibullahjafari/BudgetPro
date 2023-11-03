@@ -1,19 +1,24 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-6 text-center">
+  <div class="col-md-6 text-center">
+    <% if user_signed_in? %>
       <h1 class="mt-5"> Welcome <%= current_user.full_name %> to BudgetPro</h1>
       <%= link_to "Categories", categories_path, class: "btn secondary-color my-4" %>
+    <% else %>
+      <h1 class="mt-5 headline "> Welcome to BudgetPro</h1>
+    <% end %>
 
-      <% if user_signed_in? %>
-        <p>You are signed in.</p>
-      <% else %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success my-2" %>
-        <%= link_to "Log In", new_user_session_path, class: "btn btn-primary my-2" %>
-      <% end %>
+    <% if user_signed_in? %>
+      <p>You are signed in.</p>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn secondary-color my-2" %>
+      <%= link_to "Log In", new_user_session_path, class: "btn primary-color my-2" %>
+    <% end %>
 
-      <p class="mt-4">
-        BudgetPro is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
-      </p>
-    </div>
+    <p class="mt-4 general-text">
+      BudgetPro is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+    </p>
   </div>
+</div>
+
 </div>

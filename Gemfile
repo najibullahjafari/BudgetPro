@@ -50,7 +50,19 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'active_model_serializers'
+  gem 'bogus'
+  gem 'cancancan'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'regexp_parser', '2.8.1'
+  gem 'rspec-rails', '~> 5.0'
+  gem 'rswag'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false
+  gem 'webdrivers'
 end
 
 group :development do

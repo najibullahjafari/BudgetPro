@@ -3,33 +3,44 @@ class TransactionsController < ApplicationController
 
   def index
     @category = Category.find(params[:category_id])
-    @transactions = @category.transactions.order(created_at: :desc)
-    @total_amount = @transactions.sum(:amount)
+    @budget_transactions = @category.budget_transactions.order(created_at: :desc)
+    @total_amount = @budget_transactions.sum(:amount)
   end
 
   def new
     @category = Category.find(params[:category_id])
+
     @transaction = Transaction.new
   end
 
   def create
-    @transaction = current_user.transactions.build(transaction_params)
-
-    # Set the category_id based on the URL parameter
-    @transaction.category_id = params[:category_id]
+    @transaction = Transaction.new(transaction_params)
+    @transaction.user = current_user
 
     if @transaction.save
-      category = Category.find(params[:category_id]) # Find the associated category
-      redirect_to category_transactions_path(category), notice: 'Transaction added'
+      # The transaction will be associated with the selected categories automatically
+      redirect_to category_transactions_path(@category), notice: 'Transaction added'
     else
+      @category = Category.find(params[:category_id])
       render :new
     end
   end
 
+
+
+
+
+
+
+
+
+
+
+
   private
 
   def transaction_params
-    params.require(:transaction).permit(:name, :amount)
+    params.require(:transaction).permit(:name, :amount, category_ids: [])
   end
 
   def set_category
