@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <div class=" my-4" style="max-width: 400px; margin: 0 auto;">
+    <div class="">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="mb-3">
+          <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", class: "form-control no-border-radius" %>
+        </div>
+        <div class="mb-3">
+          <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "form-control no-border-radius" %>
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="mb-3">
+            <%= f.check_box :remember_me, class: "form-check-input" %>
+            <%= f.label :remember_me, class: "form-check-label" %>
+          </div>
+        <% end %>
+        <div class="d-grid gap-2">
+          <%= f.submit "Log in", class: "btn primary-color btn-end" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render "devise/shared/links" %>
+</div>

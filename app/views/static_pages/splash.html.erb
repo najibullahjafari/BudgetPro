@@ -1,0 +1,22 @@
+<div class="container" style="min-height: 100vh;">
+    <div class="col-md-6 text-center">
+      <% if user_signed_in? %>
+        <%= link_to "Categories", categories_path, class: "btn btn-end secondary-color my-4" %>
+      <% else %>
+        <h1 class="mt-5 headline">BudgetPro</h1>
+      <% end %>
+    </div>
+
+
+  <footer class="sign-foot text-center">
+    <% unless user_signed_in? %>
+      <div class="my-2">
+        <%= link_to "Log In", new_user_session_path, class: "btn primary-color btn-end", style: "width: 380px;" %>
+        
+      </div>
+      <div class="my-2">
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-end ", style: "width: 380px;" %>
+      </div>
+    <% end %>
+  </footer>
+</div>

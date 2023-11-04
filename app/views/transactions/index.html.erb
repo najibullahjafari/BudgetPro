@@ -1,0 +1,35 @@
+<h2 class="mt-0 mb-4 p-2 primary-color text-white text-center">Transactions</h2>
+<div class="container">
+  <p class="text-color general-text">Total Amount: <%= @total_amount %></p>
+  <ul class="list-group">
+    <% @budget_transactions.each do |transaction| %>
+      <li class="list-group-item d-flex no-border-radius justify-content-between category-item align-items-center mb-3 shadow-lg">
+        <div class="d-flex align-items-center">
+          <div class="category-icon fa-2x">
+            <i class="<%= @category.icon %>"></i>
+          </div>
+          <span class="transaction-name text-color general-text">
+            <%= transaction.name %>
+            <br>
+            <small class="text-muted"><%= transaction.created_at.strftime("%B %d, %Y") %></small>
+          </span>
+        </div>
+        <span class="text-color general-text">$<%= transaction.amount %></span>
+      </li>
+    <% end %>
+  </ul>
+
+
+</div>
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <%= link_to "Add", new_category_transaction_path(@category), class: 'btn secondary-color btn-end  my-4' %>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <%= link_to "Back", categories_path, class: 'btn btn-end border-white primary-color' %>
+    </div>
+  </div>
+</div>

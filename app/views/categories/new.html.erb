@@ -1,0 +1,50 @@
+<h2 class="mt-0 mb-4 p-2 primary-color text-white text-center">Add a new Category</h2>
+<div class="container">
+  
+  <%= form_for @category, class: 'form' do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :icon %>
+      <div class="icon-container">
+        <% list_font_awesome_icons.each do |fa_class, name| %>
+          <span class="icon-item" onclick="selectIcon(this, '<%= fa_class %>')">
+            <i class="<%= fa_class %> fa-2x"></i>
+          </span>
+        <% end %>
+      </div>
+      <%= f.hidden_field :icon, class: 'selected-icon-input' %>
+    </div>
+
+   <div class="actions mt-3 row">
+  <div class="col">
+    <%= f.submit "Save", class: 'btn secondary-color btn-end btn-block' %>
+  </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col">
+    <%= link_to 'Back', categories_path, class: 'btn btn-end primary-color btn-block' %>
+  </div>
+</div>
+  <% end %>
+
+
+
+<script>
+  function selectIcon(element, iconClass) {
+    // Remove selected class from all icons
+    document.querySelectorAll('.icon-item').forEach(function (item) {
+      item.classList.remove('selected-icon');
+    });
+
+    // Add selected class to the clicked icon
+    element.classList.add('selected-icon');
+
+    // Set the selected icon in the hidden input field
+    document.querySelector('.selected-icon-input').value = iconClass;
+  }
+</script>

@@ -1,0 +1,29 @@
+<h2 class="mt-0 mb-4 p-2 primary-color text-white text-center">Categories</h2>
+<div class="container mx-auto">
+  <ul class="list-group">
+    <% @categories.each do |category| %>
+      <li class="list-group-item d-flex no-border-radius justify-content-between category-item align-items-center mb-3 shadow-lg">
+        <a href="<%= category_transactions_path(category) %>" class="text-decor-none  text-decore" style="width: 100%;">
+          <div class="row">
+            <div class="col-2">
+              <span class="category-icon <%= category.icon %> fa-2x"></span>
+            </div>
+            <div class="col-5 category-name general-text">
+              <%= category.name %>
+              <br>
+             <small class= "num-of-trans text-color"><%= category.budget_transactions.count %> transactions</small>
+
+            </div>
+            <div class="col-2 text-right category-amount general-text">
+              <%= number_to_currency(category.total_amount) %>
+            </div>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <div class = "row text-center">
+        <div class = "col m-1">
+  <%= link_to "Add", new_category_path, class: 'btn secondary-color btn-end my-4' %>
+  </div></div>
+</div>
